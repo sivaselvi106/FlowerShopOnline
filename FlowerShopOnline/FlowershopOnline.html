@@ -1,0 +1,245 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="home.css" type="text/css">
+    <title>FLOWER SHOP</title>
+    <script src="home.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2 class="titleClass">FLOWER SHOP ONLINE</h2>
+        <div class="nav-bar"></div>
+    </header>
+    <div class="Imgflower">
+        <img id="Imgflower" src="flower.jpg" alt="flower image" />
+    </div>
+    <div>
+        <table>
+            <div>
+                <tr>
+                    <td colspan="2">
+                        <h2 class="securePay">Secure Payment Page</h2>
+                    </td>
+                </tr>
+                <tr class="rowspacing">
+                    <td><label><b>Select Language</b></label></td>
+                    <td colspan="2">
+                        <select id="language">
+                            <option value="English">English</option>
+                            <option value="Tamil">Tamil</option>
+                            <option value="Telugu">Telugu</option>
+                            <option value="Hindi">Hindi</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="rowspacing">
+                    <td><label>Payment Method</label></td>
+                    <td colspan="2"><b>Visa</b></td>
+                </tr>
+                <tr class="rowspacing">
+                    <td><label>Description</label></td>
+                    <td colspan="2"><b>Item ordered</b></td>
+                </tr>
+                <tr class="rowspacing">
+                    <td><label>Amount</label></td>
+                    <td><b>&euro;100.00</b></td>
+                </tr>
+            </div>
+            <div class="Imgvisa">
+                <img id="visa" src="visa.png" alt="visa-image" />
+            </div>
+        </table>
+        <table class="centerTable">
+            <tr>
+                <td colspan="2" style="background: rgb(101, 190, 11);;color: white;">Card details<i
+                        style="position: relative;right: -535;color: black;" class='fas fa-question-circle'></i></td>
+            </tr>
+            <tr>
+                <td colspan="2">You must fill in fields marked with <b style="color: red">*</b></td>
+            </tr>
+            <tr>
+                <td>
+                    <label><b id="star">*</b> Card number</label>
+                </td>
+                <td><input id="cardNo" type="number" maxlength="16" minlength="16" size="50%"
+                        onchange="validateCardNumber()" required>
+                    <div id="cardnumber"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label id="securityCode"><b id="star">*</b> Security code</label>
+                </td>
+                <td><input id="security" type="password" maxlength="4" minlength="4" required
+                        onchange="validateSecurityCode()">
+                    <div id="scode"></div>
+                </td>
+            </tr>
+            <tr>
+                <td><label><b id="star">*</b> Expiry date</label></td>
+                <td>
+                    <select id="expirymonth" value=" " required>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <select id="expiryyear" value=" " required>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label><b id="star">*</b> Cardholder's name</label>
+                </td>
+                <td><input type="text" id="name" size="70%" required>
+                    <div id="Holdername"></div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="details">Cardholder details<i
+                        style="position: relative;right: -495;color: black;" class='fas fa-question-circle'></i>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">You must fill in fields marked with <b id="star">*</b></td>
+            </tr>
+            <tr>
+                <td>
+                    <label><b id="star">*</b> Address1</label>
+                </td>
+                <td><input type="text" id="Address1" size="70%" required>
+                    <div id="address"></div>
+                </td>
+            </tr>
+            <tr class="rowspacing">
+                <td>
+                    <label>&nbsp;&nbsp;Address2</label>
+                </td>
+                <td><input type="text" id="Address2" size="70%"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label>&nbsp;&nbsp;Address3</label>
+                </td>
+                <td><input type="text" id="Address3" size="70%"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label><b id="star">*</b> Town/City</label>
+                </td>
+                <td><input type="text" id="town" size="70%" required>
+                    <div id="townId"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>&nbsp;&nbsp;Region</label>
+                </td>
+                <td><input type="text" id="Region" size="70%"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label><b id="star">*</b>Postcode/Zipcode</label>
+                </td>
+                <td><input type="number" id="pincode" minlength="6" maxlength="6" size="30%" required
+                        onchange="validatePinCode()">
+                    <div id="pin"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label><b id="star">*</b> Country</label>
+                </td>
+                <td><select id="country" required>
+                        <option value="United kingdom">United Kingdom</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Telugu">Telugu</option>
+                        <option value="Hindi">Hindi</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td>
+                    <label>&nbsp;&nbsp;Telephone</label>
+                </td>
+                <td><input type="number" id="phone" minlength="10" maxlength="10" size="30%"
+                        onchange="validateMobileNumber()">
+                    <div id="Telephone"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>&nbsp;&nbsp;Fax</label>
+                </td>
+                <td><input type="number" id="fax" size="30%" minlength="10" maxlength="10" onchange="validateFax()">
+                    <div id="faxValue"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label><b id="star">*</b> Email</label>
+                </td>
+                <td><input type="email" id="email" size="60%" required onchange="ValidateEmail()">
+                    <div id="mailId"></div>
+                </td>
+            </tr>
+        </table>
+        <div class="icons">
+            <p><i style="font-size: 15px;">&#xe042;</i><button class="material-icons" type="submit"></button>START
+                AGAIN</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button
+                    class="material-icons" onclick="ValidateNullField()">MAKE PAYMENT</button><i
+                    style="font-size: 18px;">&#xe8b9;</i></p>
+            <p><i style='font-size:15px'>&#xf057;</i><button class="material-icons">CANCEL</button></p>
+            <hr>
+        </div>
+        <div style="margin-left: 37%;">
+            <table>
+                <tr>
+                    <td id="info" colspan="2">
+                        <h3>Refunds and Returns</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="info">
+                        <h4>For more information visit our<a href="#" style="text-decoration: underline;">Refunds and
+                                Returns Policy.</a></h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="1" id="info">
+                        <h5>payments powerded by</h5>
+                    </td>
+                    <td rowspan="2" id="info">For help with your payment visit the <a id="PayLink" href="#">WorldPay
+                            help</a></td>
+                </tr>
+                <tr>
+                    <td colspan="1" id="info">
+                        <h3>WorldPay</h3>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="footerBar" >
+            <h2 class="end">Thank you for shopping at Flowershop.Have a nice day</h3>
+        </div>
+</body>
+
+</html>

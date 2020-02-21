@@ -1,0 +1,78 @@
+.titleClass,.securePay{
+    color: rgb(31, 31, 197);
+}
+.nav-bar{
+    background-color: rgb(101, 190, 11);
+    height: 5%;
+    width: 100%;
+}
+.Imgflower{
+    padding : 10% 10%;
+    float: left;
+}
+#Imgflower{
+    border-radius: 50%;
+}
+
+.Imgvisa{
+    padding-right:35%;
+    padding-top: 5%;
+}
+#visa{
+    float: right;
+    width: 10%; 
+    height:10%;
+}
+#mark{
+    margin-right: 50%;
+}
+.centerTable{
+    background-color:rgb(255, 186, 122);
+    margin-left:30%;
+    width: 41%;
+}
+#cardNo,#security,#expirymonth,#expiryyear,#name,#Address1,#Address2,#Address3,#town,#Region,#pincode,#country,#phone,#fax,#email{
+    border: 2px solid rgb(77, 194, 240);
+    border-radius: 5%;
+}
+#securityCode{
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+.details{
+   background: rgb(101, 190, 11);
+   color: white;
+   width: 100%;
+   padding: 7px;
+}
+#star{
+    color: rgb(248, 8, 8);
+}
+#line{
+    border-color:rgb(101, 190, 11);
+}
+.icons{
+    margin-left: 37%;
+}
+.material-icons{
+    border: none;
+    background-color: white;
+}
+#PayLink{
+    text-decoration: underline;
+    text-decoration-color: black;
+    color:blue;
+}
+
+#info{
+    color: blue;
+}
+
+.footerBar{
+    text-align: center;
+    background-color:rgb(101, 190, 11);
+}
+.end{
+    color:rgb(17,17,141);
+    width: auto;
+}
